@@ -1,0 +1,127 @@
+.section {
+  background: #111214;
+  padding-block: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgGrid {
+  position: absolute; inset: 0;
+  display: flex; justify-content: space-around;
+  pointer-events: none; z-index: 0;
+}
+.bgLine { width: 1px; height: 100%; background: rgba(255,255,255,0.022); }
+
+.container {
+  max-width: 1280px; width: 100%;
+  margin-inline: auto; padding-inline: 2rem;
+  position: relative; z-index: 1;
+}
+
+.header { text-align: center; margin-bottom: 3rem; }
+.eyebrow {
+  display: inline-block; font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: #f5c518; margin-bottom: 0.75rem;
+}
+.title {
+  font-family: 'Oswald', 'Impact', sans-serif; font-size: 3.2rem;
+  font-weight: 700; letter-spacing: 4px; color: #f0ede8; line-height: 1; margin-bottom: 1rem;
+}
+.title span { color: #f5c518; }
+.rule { width: 60px; height: 2px; background: #f5c518; margin: 1rem auto; }
+.subtitle { font-size: 1rem; color: #666; font-weight: 300; max-width: 480px; margin-inline: auto; line-height: 1.8; }
+
+/* Filtros */
+.filters {
+  display: flex; flex-wrap: wrap; gap: 0.5rem;
+  justify-content: center; margin-bottom: 2.5rem;
+}
+.filterBtn {
+  padding: 0.45rem 1.1rem; border-radius: 4px;
+  border: 1px solid #2a2b2e; color: #555;
+  background: transparent; font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 1px; text-transform: uppercase; cursor: pointer;
+  transition: all 0.2s; font-family: inherit;
+}
+.filterBtn:hover { border-color: rgba(245,197,24,0.4); color: #f5c518; }
+.filterActive { background: #f5c518 !important; color: #111 !important; border-color: #f5c518 !important; }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* Card */
+.photoCard {
+  position: relative; border-radius: 10px; overflow: hidden;
+  border: 1px solid #2a2b2e; cursor: pointer; aspect-ratio: 4/3;
+  background: none; padding: 0;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.photoCard:hover { border-color: rgba(245,197,24,0.5); transform: scale(1.02); }
+
+.photoPlaceholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+}
+.photoIcon { font-size: 2.5rem; opacity: 0.3; }
+
+.photoOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
+  display: flex; flex-direction: column;
+  justify-content: flex-end; align-items: flex-start;
+  padding: 1rem; opacity: 0; transition: opacity 0.25s;
+}
+.photoCard:hover .photoOverlay { opacity: 1; }
+
+.photoLabel { font-size: 0.82rem; font-weight: 600; color: #f0ede8; letter-spacing: 0.5px; }
+.photoCat {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: #f5c518; margin-top: 3px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.92); display: flex;
+  align-items: center; justify-content: center;
+  padding: 2rem;
+}
+.lightboxInner {
+  background: #16181b; border: 1px solid #2a2b2e;
+  border-radius: 14px; overflow: hidden;
+  max-width: 700px; width: 100%; position: relative;
+}
+.lightboxClose {
+  position: absolute; top: 1rem; right: 1rem;
+  background: #2a2b2e; border: none; color: #888;
+  width: 32px; height: 32px; border-radius: 50%;
+  font-size: 0.85rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s; z-index: 1;
+}
+.lightboxClose:hover { background: #f5c518; color: #111; }
+.lightboxPhoto {
+  aspect-ratio: 16/9; display: flex;
+  align-items: center; justify-content: center;
+}
+.lightboxIcon { font-size: 4rem; opacity: 0.2; }
+.lightboxCaption {
+  padding: 1rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+  border-top: 1px solid #2a2b2e;
+}
+.lightboxLabel { font-size: 0.95rem; font-weight: 500; color: #f0ede8; }
+.lightboxCat {
+  font-size: 0.65rem; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: #f5c518;
+  background: rgba(245,197,24,0.08); border: 1px solid rgba(245,197,24,0.2);
+  padding: 0.25rem 0.75rem; border-radius: 4px;
+}
+
+@media (max-width: 1024px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px)  { .grid { grid-template-columns: repeat(2, 1fr); } .title { font-size: 2.2rem; } }
+@media (max-width: 480px)  { .section { padding-block: 4rem; } .grid { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,364 @@
+/* ================================
+   SECCIÓN
+================================ */
+.section {
+  background: #16181b;
+  padding-block: 6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(245,197,24,.2), transparent);
+}
+
+/* ================================
+   LAYOUT
+================================ */
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ================================
+   COLUMNA TEXTO
+================================ */
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5c518;
+}
+
+.title {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f0ede8;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.title span { color: #f5c518; }
+
+.rule {
+  width: 60px;
+  height: 2px;
+  background: #f5c518;
+  flex-shrink: 0;
+}
+
+/* ── Founder box ── */
+.founderBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #111214;
+  border: 1px solid #2a2b2e;
+  border-left: 3px solid #f5c518;
+  border-radius: 0 10px 10px 0;
+  padding: 1rem 1.25rem;
+}
+
+.founderAvatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(245,197,24,.12);
+  border: 1px solid rgba(245,197,24,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f5c518;
+  flex-shrink: 0;
+}
+
+.founderName {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #f0ede8;
+  letter-spacing: 0.5px;
+}
+
+.founderRole {
+  font-size: 0.7rem;
+  color: #555;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Párrafos */
+.desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.85;
+  font-weight: 300;
+  margin: 0;
+}
+
+.desc strong {
+  color: #999;
+  font-weight: 500;
+}
+
+/* ── Valores ── */
+.valuesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.valueItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #111214;
+  border: 1px solid #2a2b2e;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  transition: border-color 0.2s;
+}
+
+.valueItem:hover {
+  border-color: rgba(245,197,24,.35);
+}
+
+.valueIcon {
+  font-size: 1.3rem;
+  color: #f5c518;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.valueTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f0ede8;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.valueDesc {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ================================
+   COLUMNA VISUAL
+================================ */
+.visualCol {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 6rem;
+}
+
+.statsCard {
+  background: #111214;
+  border: 1px solid #2a2b2e;
+  border-radius: 14px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea superior amarilla */
+.statsCardTop {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5c518, transparent);
+}
+
+/* HUD header */
+.hudRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+.hudDotYellow {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #f5c518;
+  box-shadow: 0 0 6px rgba(245,197,24,.6);
+}
+
+.hudDot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #2a2b2e;
+}
+
+.hudLabel {
+  margin-left: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #444;
+  text-transform: uppercase;
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.statBox {
+  background: #16181b;
+  border: 1px solid #2a2b2e;
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.statBox:hover {
+  border-color: rgba(245,197,24,.3);
+}
+
+.statNum {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5c518;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.65rem;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0.4rem;
+  font-weight: 500;
+}
+
+/* Separador */
+.cardDivider {
+  height: 1px;
+  background: #1e1f22;
+  margin-bottom: 1.25rem;
+}
+
+/* Especialidades */
+.specTitle {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.specList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.specTag {
+  background: #16181b;
+  border: 1px solid #2a2b2e;
+  color: #666;
+  padding: 0.25rem 0.7rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+
+.specTag:hover {
+  border-color: rgba(245,197,24,.35);
+  color: #f5c518;
+}
+
+/* Badge certificado */
+.certBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(245,197,24,.05);
+  border: 1px solid rgba(245,197,24,.18);
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #f5c518;
+  text-transform: uppercase;
+}
+
+.certDot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #f5c518;
+  animation: blink 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.25; }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .visualCol {
+    position: static;
+    order: -1;
+  }
+
+  .statsCard {
+    max-width: 100%;
+  }
+
+  .title { font-size: 2.4rem; }
+}
+
+@media (max-width: 480px) {
+  .section { padding-block: 4rem; }
+  .container { padding-inline: 1.25rem; }
+  .title { font-size: 2rem; }
+}

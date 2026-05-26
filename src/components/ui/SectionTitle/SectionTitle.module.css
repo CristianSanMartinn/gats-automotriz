@@ -1,0 +1,62 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+.centered {
+  text-align: center;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: var(--text-xs, 0.68rem);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-yellow, #f5c518);
+}
+
+.title {
+  font-family: var(--font-display, 'Oswald', 'Impact', sans-serif);
+  font-size: var(--text-3xl, 3.8rem);
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--color-text-primary, #f0ede8);
+  line-height: 1;
+  margin: 0;
+}
+
+.accent {
+  color: var(--color-yellow, #f5c518);
+}
+
+.rule {
+  width: 48px;
+  height: 2px;
+  background: var(--color-yellow, #f5c518);
+  border-radius: 1px;
+  margin-top: 0.5rem;
+}
+
+.ruleCenter {
+  margin-inline: auto;
+}
+
+.subtitle {
+  font-size: var(--text-base, 1rem);
+  color: var(--color-text-muted, #444);
+  font-weight: 300;
+  max-width: 520px;
+  line-height: 1.8;
+  margin-top: 0.5rem;
+}
+
+.centered .subtitle {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.6rem; }
+}

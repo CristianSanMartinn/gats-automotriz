@@ -1,0 +1,348 @@
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  background: #0d0e10;
+  color: #f0ede8;
+  position: relative;
+}
+
+/* Línea amarilla superior */
+.topRule {
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #f5c518 30%, #f5c518 70%, transparent 100%);
+  opacity: 0.4;
+}
+
+/* ================================
+   GRID PRINCIPAL
+================================ */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem 3rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+  gap: 3rem;
+}
+
+/* ================================
+   BRAND
+================================ */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.brandLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.logoMark {
+  width: 42px;
+  height: 42px;
+  background: #f5c518;
+  color: #111;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.logoName {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #f0ede8;
+  line-height: 1;
+}
+
+.logoSub {
+  font-size: 0.6rem;
+  color: #444;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.brandDesc {
+  font-size: 0.83rem;
+  color: #444;
+  line-height: 1.75;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Redes sociales */
+.socials {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.socialBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 7px;
+  background: #16181b;
+  border: 1px solid #2a2b2e;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+
+.socialBtn:hover {
+  background: #f5c518;
+  border-color: #f5c518;
+  color: #111;
+  transform: translateY(-2px);
+}
+
+/* ================================
+   COLUMNAS
+================================ */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.colTitle {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #f5c518;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.colTitleLine {
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: #f5c518;
+  flex-shrink: 0;
+}
+
+/* ================================
+   LINKS
+================================ */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.navLink {
+  color: #444;
+  font-size: 0.83rem;
+  font-weight: 300;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.navLink:hover {
+  color: #f5c518;
+  gap: 0.65rem;
+}
+
+.linkArrow {
+  color: #2a2b2e;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navLink:hover .linkArrow {
+  color: #f5c518;
+}
+
+/* ================================
+   CONTACTO
+================================ */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.contactIcon {
+  color: #f5c518;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.contactLink {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: #f5c518;
+}
+
+/* ================================
+   HORARIO
+================================ */
+.schedule {
+  background: #111214;
+  border: 1px solid #2a2b2e;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.scheduleTitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.scheduleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid #1e1f22;
+}
+
+.scheduleRow:last-child {
+  border-bottom: none;
+}
+
+.scheduleDay {
+  color: #555;
+}
+
+.scheduleHours {
+  color: #f5c518;
+  font-weight: 600;
+  font-size: 0.72rem;
+}
+
+.scheduleClosed {
+  color: #f87171;
+  font-weight: 500;
+  font-size: 0.72rem;
+}
+
+/* ================================
+   URGENCIAS
+================================ */
+.urgency {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(245, 197, 24, 0.05);
+  border: 1px solid rgba(245, 197, 24, 0.18);
+  border-radius: 7px;
+  padding: 0.75rem 1rem;
+}
+
+.urgencyDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f5c518;
+  flex-shrink: 0;
+  animation: blink 1.8s ease-in-out infinite;
+}
+
+.urgencyTitle {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #f0ede8;
+}
+
+.urgencyDesc {
+  font-size: 0.68rem;
+  color: #555;
+  margin-top: 1px;
+}
+
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.2; }
+}
+
+/* ================================
+   BOTTOM BAR
+================================ */
+.bottom {
+  border-top: 1px solid #1a1b1e;
+  padding: 1.4rem 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bottom p {
+  font-size: 0.72rem;
+  color: #2a2b2e;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.bottomRight {
+  color: #2a2b2e;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1100px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .brandLogo { justify-content: flex-start; }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.2rem 1.5rem;
+  }
+}

@@ -1,0 +1,177 @@
+.section {
+    background: #111214;
+    padding-block: 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bgGrid {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bgLine {
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.022);
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c518;
+    margin-bottom: 0.75rem;
+}
+
+.title {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #f0ede8;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+.title span { color: #f5c518; }
+
+.rule {
+    width: 60px;
+    height: 2px;
+    background: #f5c518;
+    margin: 1rem auto;
+}
+
+.subtitle {
+    font-size: 1rem;
+    color: #666;
+    font-weight: 300;
+    max-width: 520px;
+    margin-inline: auto;
+    line-height: 1.8;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+/* Card */
+.card {
+    background: #16181b;
+    border: 1px solid #2a2b2e;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+    cursor: default;
+}
+
+.card:hover {
+    border-color: rgba(245, 197, 24, 0.4);
+    transform: translateY(-4px);
+}
+
+.cardAccent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f5c518, transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+.card:hover .cardAccent { opacity: 1; }
+
+.cardIcon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.cardTitle {
+    font-family: 'Oswald', 'Impact', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f0ede8;
+    margin-bottom: 0.75rem;
+}
+
+.cardDesc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.75;
+    font-weight: 300;
+    margin-bottom: 1.25rem;
+}
+
+.cardTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    background: #1a1b1e;
+    border: 1px solid #2a2b2e;
+    color: #555;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+.card:hover .tag {
+    border-color: rgba(245, 197, 24, 0.25);
+    color: #f5c518;
+}
+
+@media (max-width: 1024px) {
+
+  .grid { grid-template-columns: repeat(2, 1fr); }
+
+  .title { font-size: 2.4rem; }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  .section { padding-block: 4rem; }
+
+  .grid { grid-template-columns: 1fr; }
+
+  .title { font-size: 2rem; }
+
+}
+
+

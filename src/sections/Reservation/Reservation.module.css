@@ -1,0 +1,433 @@
+/* ================================
+   SECTION
+================================ */
+.section {
+  background: #16181b;
+  padding-block: 6rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* ================================
+   BACKGROUND GRID
+================================ */
+.bgGrid {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: space-around;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgLine {
+  width: 1px;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.022);
+}
+
+/* ================================
+   CONTAINER
+================================ */
+.container {
+  width: 100%;
+
+  padding-inline: 4rem;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   HEADER
+================================ */
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: #f5c518;
+
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: 'Oswald', 'Impact', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #f0ede8;
+
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: #f5c518;
+}
+
+.rule {
+  width: 60px;
+  height: 2px;
+
+  background: #f5c518;
+
+  margin: 1rem auto;
+}
+
+.subtitle {
+  max-width: 520px;
+
+  margin-inline: auto;
+
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+
+  color: #666;
+}
+
+/* ================================
+   LAYOUT
+================================ */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 2rem;
+
+  align-items: start;
+}
+
+/* ================================
+   FORM
+================================ */
+.form {
+  background: #111214;
+  border: 1px solid #2a2b2e;
+
+  border-radius: 14px;
+  padding: 2rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #555;
+}
+
+.input {
+  width: 100%;
+
+  background: #16181b;
+  border: 1px solid #2a2b2e;
+
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+
+  color: #f0ede8;
+  font-size: 0.9rem;
+  font-family: inherit;
+
+  outline: none;
+
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: rgba(245, 197, 24, 0.5);
+}
+
+.input::placeholder {
+  color: #444;
+}
+
+.input option {
+  background: #16181b;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+/* ================================
+   BUTTON
+================================ */
+.submitBtn {
+  width: 100%;
+
+  background: #f5c518;
+  color: #111;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 1rem;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.25s;
+
+  font-family: inherit;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: #ffd740;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 24px rgba(245, 197, 24, 0.3);
+}
+
+.submitBtn:disabled {
+  background: #2a2b2e;
+  color: #4ade80;
+
+  cursor: default;
+}
+
+/* ================================
+   INFO CARD
+================================ */
+.infoCard {
+  background: #111214;
+  border: 1px solid #2a2b2e;
+
+  border-radius: 14px;
+  padding: 1.75rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.infoCardTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #f5c518,
+    transparent
+  );
+}
+
+.infoTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #f0ede8;
+
+  margin-bottom: 1.5rem;
+}
+
+.infoRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+  border-bottom: 1px solid #1e1f22;
+}
+
+.infoIcon {
+  font-size: 1.2rem;
+
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.infoLabel {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #444;
+
+  margin-bottom: 3px;
+}
+
+.infoVal {
+  font-size: 0.88rem;
+  color: #f0ede8;
+}
+
+/* ================================
+   HOURS
+================================ */
+.hours {
+  margin-top: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.hoursTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #888;
+
+  margin-bottom: 0.75rem;
+}
+
+.hoursRow {
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 0.85rem;
+  color: #666;
+
+  padding: 0.35rem 0;
+
+  border-bottom: 1px solid #1e1f22;
+}
+
+.hoursRow:last-child {
+  border-bottom: none;
+}
+
+.closed {
+  color: #f87171;
+  font-weight: 500;
+}
+
+/* ================================
+   URGENCY
+================================ */
+.urgency {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  background: rgba(245, 197, 24, 0.06);
+  border: 1px solid rgba(245, 197, 24, 0.2);
+
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+}
+
+.urgencyDot {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #f5c518;
+
+  flex-shrink: 0;
+
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+.urgencyTitle {
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  color: #f0ede8;
+}
+
+.urgencyDesc {
+  font-size: 0.72rem;
+  color: #666;
+
+  margin-top: 2px;
+}
+
+/* ================================
+   ANIMATION
+================================ */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2.4rem;
+  }
+
+  .container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-block: 4rem;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+}
