@@ -6,7 +6,7 @@ interface Props {
   message?: string;
 }
 
-export const Whatsappbutton: React.FC<Props> = ({
+export const Button: React.FC<Props> = ({
   phone,
   message = "Hola, necesito información sobre el taller 🔧",
 }) => {
@@ -52,4 +52,4 @@ export const Whatsappbutton: React.FC<Props> = ({
   );
 };
 
-export default Whatsappbutton;
+export default Button;
