@@ -1,7 +1,7 @@
-import { Navbar }        from "./components/layout/Navbar/Navbar";
-import { Footer }        from "./components/layout/Footer/Fooder";
-import { Home }          from "./page/Home/Home";
-import { Button } from "./components/ui/WhatsAppButton/Button";
+import { Navbar }  from "./components/layout/Navbar/Navbar";
+import { Footer }  from "./components/layout/Footer/Fooder";   // ← Fooder → Footer
+import { Home }    from "./page/Home/Home";
+import { Button }  from "./components/ui/WhatsAppButton/Button";
 
 const App = () => {
   return (
