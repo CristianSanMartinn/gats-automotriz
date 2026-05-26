@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./WhatsAppButton.module.css";
+import styles from "./Button.module.css";
 
 interface Props {
   phone:   string;  // formato: 56912345678
