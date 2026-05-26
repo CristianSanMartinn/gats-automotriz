@@ -1,7 +1,7 @@
 import { Navbar }        from "./components/layout/Navbar/Navbar";
 import { Footer }        from "./components/layout/Footer/Fooder";
 import { Home }          from "./page/Home/Home";
-import { Whatsappbutton } from "./components/ui/WhatsAppButton/Whatsappbutton";
+import { TempButton } from "./components/ui/WhatsAppButton/TempButton";
 
 const App = () => {
   return (
@@ -11,7 +11,7 @@ const App = () => {
         <Home />
       </main>
       <Footer />
-      <Whatsappbutton phone="56912345678" />
+      <TempButton phone="56912345678" />
     </>
   );
 };
